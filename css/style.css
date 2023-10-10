@@ -1,0 +1,494 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:ital,wght@1,900&display=swap");
+
+
+@import url(./reset.css);
+@import url(./bass.css);
+@import url(./utilits.css);
+
+
+
+/* nav 样式 */
+.navbar {
+  padding: 16px 0;
+  @media (max-width: 768px) {
+    padding-bottom: 0;
+  }
+}
+
+.navbar-wrap {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+}
+
+.navbar-logo {
+  width: 100px;
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.navbar-item {
+  height: 100%;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-right: 0px;
+    border: 1px solid #ffffff;
+  }
+}
+
+.navbar-link {
+  height: 100%;
+  display: block;
+  font-size: 20px;
+  color: #9EBC19;
+  padding: 8px 32px;
+
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0 auto;
+
+  }
+}
+
+.navbar-link:hover {
+  opacity: 0.7;
+}
+
+.navbar-item:last-child .navbar-link {
+  padding-right: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* 添加锚点链接样式 */
+
+#menu,
+#shoppingcart {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.banner {
+  width: 100%;
+  /* 使横幅充满整个页面宽度 */
+  overflow: hidden;
+  /* 隐藏溢出内容 */
+}
+
+.banner img {
+  width: 100%;
+  /* 让图像充满横幅宽度 */
+  height: auto;
+  display: block;
+}
+
+
+.modal #login {
+  display: none;
+  position: fixed;
+  opacity: .7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 500px;
+  width: 500px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* 下滑动画 */
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+
+/* 样式可以根据需要自定义 */
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category-btn {
+  padding: 10px 10px;
+  background-color: #b3b1b1;
+  width: 25%;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 45%;
+  }
+}
+
+.category-btn:hover {
+  background-color: #9EBC19;
+}
+
+.category-item {
+  margin-bottom: 24px;
+}
+
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.card-item {
+  width: 30%;
+  padding: 12px 16px;
+  gap: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border: 1px solid #9EBC19;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-item img{
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+ max-width: 100%;
+ vertical-align: top;
+}
+
+.card-item img:hover{
+  transform: scale(1.2);
+  transition: .3s;
+}
+
+
+@media (max-width: 768px) {
+  .card-item {
+    width: 45%;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-item {
+    width: 100%;
+
+  }
+
+  .container {
+    max-width: 372px;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 80px;
+   
+}
+
+.item {
+  background-color: #9EBC19;
+  border-radius: 15%;
+  width: 30px; /* 设置按钮的宽度 */
+  height: 30px; /* 设置按钮的高度，确保宽高相等以实现圆形 */
+  border-radius: 50%; /* 使用50%的圆角半径创建圆形 */
+  color: #fff; /* 文字颜色 */
+  border: none; /* 去掉按钮边框 */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.item:hover {
+  background-color: #27ae60;
+}
+
+/* .items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 -12px;
+
+}
+
+
+.item {
+  padding: 10px 20px;
+  background-color: #9EBC19;
+  border-radius: 15px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  
+}
+
+.item:hover {
+  background-color: #27ae60;
+} */
+
+.order {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* 商品网格样式 */
+.ItemTitle {
+  text-align: center;
+  border-bottom: 3px solid #d9d9d9;
+  padding-bottom: 8px;
+  color: #9EBC19;
+}
+
+
+
+
+
+/* 商品样式 */
+.product-item {
+  justify-content: space-between;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  gap: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 45%;
+  }
+
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*ABOUT*/
+
+.mainArea {
+  padding: 100px 0 150px;
+}
+
+.position:not(.slick-slider) {
+  min-height: 960px;
+}
+@media (max-width: 360px) {
+  .position:not(.slick-slider) {
+    min-height: 306px;
+  }
+}
+.position .contentItem:not(.slick-slide) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.position img {
+  aspect-ratio: 1/0.5;
+}
+
+.positionins:not(.slick-slider) {
+  min-height: 600px;
+}
+@media (max-width: 1920px) {
+.positionins:not(.slick-slider) {
+    min-height: 500px;
+  }
+}
+@media (max-width: 1023px) {
+.positionins:not(.slick-slider) {
+    min-height: auto;
+  }
+}
+@media (max-width: 360px) {
+.positionins:not(.slick-slider) {
+    min-height: 180px;
+  }
+}
+.positionins .contentItemins:not(.slick-slide) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.positionins img {
+  aspect-ratio: 1/0.3125;
+}
+
+.bannerArea {
+  clear: both;
+  position: relative;
+  z-index:31;
+}
+
+.bannerArea .titleBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  max-width:1160px;
+  width: 100%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.bannerArea .titleBox h2 {
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 10px;
+}
+
+.bannerArea .titleBox h2:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  display: block;
+  background: #d9d9d9;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.bannerArea .titleBox h2:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  display: block;
+  background: #d9d9d9;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translate(-4px, -50%);
+  transform: translate(-4px, -50%);
+}
+
+.bannerArea .titleBox h2 em {
+  line-height: 1;
+  display: block;
+  font-family: "Amiri", serif;
+  font-size: 30px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.bannerArea .titleBox h2 em:before {
+  content: "";
+  width: 100px;
+  height: 75px;
+  background: url(../images/about-leaf.png) no-repeat;
+  background-size: contain;
+  display: block;
+  bottom: 100%;
+  left: 100%;
+  position: absolute;
+}
+
+.b-box {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.packagetitle{
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 10px;
+  border-left: 3px solid #666;
+}
+
